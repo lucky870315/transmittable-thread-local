@@ -1,6 +1,7 @@
 package com.alibaba.ttl.threadpool;
 
 import com.alibaba.ttl.TransmittableThreadLocal;
+import com.alibaba.ttl.TtlEnhanced;
 import com.alibaba.ttl.threadpool.agent.TtlAgent;
 
 import javax.annotation.Nullable;
@@ -82,7 +83,7 @@ public final class TtlExecutors {
      * @since 2.8.0
      */
     public static <T extends Executor> boolean isTtlWrapper(@Nullable T executor) {
-        return executor instanceof ExecutorTtlWrapper;
+        return executor instanceof TtlEnhanced;
     }
 
     /**

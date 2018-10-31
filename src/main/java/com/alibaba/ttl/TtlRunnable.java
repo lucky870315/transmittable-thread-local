@@ -25,7 +25,7 @@ import static com.alibaba.ttl.TransmittableThreadLocal.Transmitter.*;
  * @see java.util.concurrent.Executors
  * @since 0.9.0
  */
-public final class TtlRunnable implements Runnable {
+public final class TtlRunnable implements Runnable, TtlEnhanced {
     private final AtomicReference<Object> capturedRef;
     private final Runnable runnable;
     private final boolean releaseTtlValueReferenceAfterRun;

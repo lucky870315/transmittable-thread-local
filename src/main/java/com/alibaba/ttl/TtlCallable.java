@@ -28,7 +28,7 @@ import static com.alibaba.ttl.TransmittableThreadLocal.Transmitter.*;
  * @see java.util.concurrent.ExecutorCompletionService
  * @since 0.9.0
  */
-public final class TtlCallable<V> implements Callable<V> {
+public final class TtlCallable<V> implements Callable<V>, TtlEnhanced {
     private final AtomicReference<Object> capturedRef;
     private final Callable<V> callable;
     private final boolean releaseTtlValueReferenceAfterCall;
